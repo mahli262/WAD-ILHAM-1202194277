@@ -1,0 +1,62 @@
+.body {
+    margin: 0;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+    height: auto;
+}
+
+.col-4 p {
+    text-align: justify;
+}
+
+.jumbotron .video {
+    padding-top: 75px;
+}
+
+.jumbotron .video iframe {
+    width: 500px;
+    height: 350px;
+}
+
+.jumbotron .heading {
+    padding-bottom: 35px;
+}
+
+.layanan{
+    background-color: #e9ecef;
+    width: auto;
+    height: auto;
+}
+
+.h2 {
+    text-align: center;
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.about {
+    height: auto;
+}
+
+.about .container {
+    padding-top: 75px;
+    padding-bottom: 150px;
+}
+
+.about .col {
+    text-align: justify;
+}
+
+.layanan .col .card-text{
+    text-align: justify;
+}
+
+.section {
+    margin-top: 150px;
+}
+
+p {
+    text-align: center;
+}
