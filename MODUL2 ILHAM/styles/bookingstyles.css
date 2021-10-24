@@ -1,0 +1,41 @@
+.tagline {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    background-color: #212529;
+    width: auto;
+}
+
+.tagline p {
+    font-size: 16px;
+    padding: 8px;
+    margin: 0%;
+}
+
+.Booking .data {
+    margin-top: 20px;
+    width:auto; 
+    border-radius: 5px;
+    border: 0.5px groove #e4e4e4; 
+    height: 600px;
+}
+
+.Booking .data .foto{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.Booking .data .foto img{
+    width: 100%;
+  height: auto;
+}
+
+.Booking .data .col .form{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button .btn{
+    border: none;
+    width: 100%;
+}
