@@ -83,14 +83,10 @@
               </section>
 
                   <!-- Footer -->
-    <Footer style="bottom: 0%;position: absolute;">
-      <div class="container">
-          <div style="width: auto;">
-        <p style="text-align: center;">
+    <Footer style="bottom: 0%;position: absolute; padding-left: 45%;">
+        <p>
           Ilham_1202194277
         </p>
-      </div>
-      </div>
     </Footer>
 </body>
 </html>
