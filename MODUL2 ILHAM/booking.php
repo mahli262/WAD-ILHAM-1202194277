@@ -64,7 +64,7 @@
 
                           <div class="form-group my-2">
                             <label for="Date">Event Date</label>
-                            <input name="Date" type="text" class="form-control" id="Date" placeholder="mm/dd/yyy">
+                            <input name="Date" type="text" class="form-control" id="Date" placeholder="mm/dd/yyyy">
                           </div>
 
                           <div class="form-group my-2">
