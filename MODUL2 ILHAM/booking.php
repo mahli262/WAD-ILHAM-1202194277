@@ -55,7 +55,7 @@
 
                     <div class="col align-self-center">
                       <div class="form">
-                        <form action="mybooking.php" method="POST">
+                        <form action="mybooking.php" method="POST" autocomplete="off">
 
                           <div class="form-group my-2">
                             <label for="Name">Name</label>

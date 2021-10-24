@@ -11,9 +11,7 @@
         $name = isset($_POST['Name']) ? $_POST['Name'] : null;
         $date = isset($_POST['Date']) ? $_POST['Date'] : null;
         $time = isset($_POST['Name']) ? $_POST['Name'] : null;
-        // $cekin = $date+$time;
         $duration = isset($_POST['Duration']) ? $_POST['Duration'] : null;
-        // $cekout = $cekin+($time+$duration);
         $type = isset($_POST['BuildingType']) ? $_POST['BuildingType'] : null;
         $phoneNum = isset($_POST['PhoneNum']) ? $_POST['PhoneNum'] : null;
         $services = isset($_POST['Services']) ? $_POST['Services'] : null;
