@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/bookingstyles.css">
-    <title>Document</title>
+    <title>Ilham Ilyasa_1202194277</title>
 </head>
 <body>
         <!-- Navbar -->
@@ -74,17 +74,13 @@
 
                           <div class="form-group my-2">
                             <label for="Duration">Duration (Hours)</label>
-                            <input  name="Duration" type="text" class="form-control" id="Duration" placeholder="">
+                            <input  name="Duration" type="text" class="form-control" id="Duration" placeholder="" value="1">
                           </div>
 
                           <div class="form-group my-2">
                             <label for="BuildingType">Building Type</label>
                             <select name="BuildingType" class="form-control" id="BuildingType"<?php echo $gedung ?>>
-                              <option <?php
-                                if($gedung == null){
-                                  'selected';
-                                }
-                              ?> >Choose building type</option>
+                              <option>Choose building type</option>
                               <option <?php
                                 if($gedung == "Nusantara Hall"){
                                   echo 'selected';
@@ -110,19 +106,19 @@
                           <div class="form-group my-2">
                             <label for="Services">Add Service(s)</label>
                             <div class="form-check">
-                              <input name="Services" class="form-check-input" type="checkbox" value="Catering" id="PhoneNum">
+                              <input name="Services[]" class="form-check-input" type="checkbox" value="Catering" id="PhoneNum">
                               <label class="form-check-label" for="PhoneNum">
                                 Catering / $700
                               </label>
                           </div>
                             <div class="form-check">
-                              <input name="Services" class="form-check-input" type="checkbox" value="Decoration" id="PhoneNum">
+                              <input name="Services[]" class="form-check-input" type="checkbox" value="Decoration" id="PhoneNum">
                               <label class="form-check-label" for="PhoneNum">
                                 Decoration / $450
                               </label>
                           </div>
                             <div class="form-check">
-                              <input name="Services" class="form-check-input" type="checkbox" value="Sound System" id="PhoneNum">
+                              <input name="Services[]" class="form-check-input" type="checkbox" value="Sound System" id="PhoneNum">
                               <label class="form-check-label" for="PhoneNum">
                                 Sound System / $250
                               </label>
