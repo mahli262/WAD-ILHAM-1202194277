@@ -55,7 +55,7 @@
 
                       <div class="col align-self-center">
                         <div class="form">
-                          <form action="mybooking.php" method="GET" autocomplete="off">
+                          <form action="mybooking.php" method="post" autocomplete="off">
 
                             <div class="form-group my-2">
                               <label for="Name">Name</label>
@@ -106,7 +106,7 @@
                             <div class="form-group my-2">
                               <label for="Services">Add Service(s)</label>
                               <div class="form-check">
-                                <input name="Services" class="form-check-input" type="checkbox" value="Catering" id="PhoneNum">
+                                <input name="Services[]" class="form-check-input" type="checkbox" value="Catering" id="PhoneNum">
                                 <label class="form-check-label" for="PhoneNum">
                                   Catering / $700
                                 </label>

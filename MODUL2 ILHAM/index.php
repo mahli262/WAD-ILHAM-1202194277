@@ -72,7 +72,7 @@
                         <li class="list-group-item">Covid-19 Health Protocol</li>
                       </ul>
                       <div class="card-body mx-auto">
-                        <a class="btn btn-primary" href="boking.php?gedung=Garuda Hall" role="button">Book now</a>
+                        <a class="btn btn-primary" href="booking.php?gedung=Garuda Hall" role="button">Book now</a>
                       </div>
                     </div>
                   </div>
