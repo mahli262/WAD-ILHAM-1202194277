@@ -10,7 +10,7 @@
     <?php 
         $name = isset($_POST['Name']) ? $_POST['Name'] : null;
         $date = isset($_POST['Date']) ? $_POST['Date'] : null;
-        $time = isset($_POST['STime']) ? $_POST['STime'] : null;
+        $time = isset($_POST['Sime']) ? $_POST['STime'] : null;
         $duration = isset($_POST['Duration']) ? $_POST['Duration'] : null;
         $type = isset($_POST['BuildingType']) ? $_POST['BuildingType'] : null;
         $phoneNum = isset($_POST['PhoneNum']) ? $_POST['PhoneNum'] : null;
