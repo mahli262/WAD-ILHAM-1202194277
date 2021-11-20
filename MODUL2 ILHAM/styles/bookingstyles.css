@@ -13,12 +13,10 @@
 }
 
 .Booking .data {
-    margin-top: 20px;
+    margin-top: 100px;
     width:auto; 
     border-radius: 50px;
-    /* border: 0.5px groove #e4e4e4; */
-    /* border: 0.5px solid #bfbfbf; */
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    border: 0.5px groove #e4e4e4;
     box-shadow:20px 20px 50px 15px grey; 
     height: 600px;
 }
