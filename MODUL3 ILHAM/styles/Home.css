@@ -1,0 +1,44 @@
+.list-buku .container {
+    padding: 0;
+
+}
+
+.list-buku .title {
+    width: auto;
+    margin: 20px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.list-buku .row{
+    margin-top: 15px;
+}
+
+.list-buku .row .col{
+    padding: 0%;    
+}
+
+.list-buku .row .col .card{
+    margin: 10px;
+    width: 359px;
+    max-width: 359px;
+    height: 560px;
+    max-height: 560px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.list-buku .row .col .card .card-img-top{
+    height: 423px;
+    max-height: 423px;
+    width: auto;
+    max-width: 359px;
+}
+
+.list-buku .row .col .card .card-body .desc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
