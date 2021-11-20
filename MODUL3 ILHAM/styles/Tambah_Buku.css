@@ -1,0 +1,30 @@
+.tambah-buku .container {
+    padding: 0;
+
+}
+
+.tambah-buku .heading {
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 0%;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.tambah-buku .container .box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+    /* border: 1px solid green; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 15px 50px 10px;
+}
+
+.tambah-buku .container .box .col{
+    padding: 45px;
+    padding-top: 0%;
+}
+
+.tambah-buku .container .box .form .title{
+    font-weight: 700;
+}

@@ -1,0 +1,33 @@
+.detail-buku .container {
+    padding: 0;
+
+}
+
+.detail-buku .heading {
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.detail-buku .container .box {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: auto;
+    height: auto;
+    /* border: 1px solid green; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 15px 50px 10px;
+}
+
+.detail-buku .container .box .col{
+    padding: 30px;
+    padding-top: 10px;
+}
+
+.detail-buku .card-img-top{
+    height: 350px;
+    max-height: 350px;
+    width: auto;
+}
+
