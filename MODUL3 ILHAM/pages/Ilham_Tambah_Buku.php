@@ -15,7 +15,7 @@
     <section>
         <nav class="navbar navbar-dark bg-dark sticky-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="Ilham_Home.html">
+              <a class="navbar-brand" href="Ilham_Home.php">
                 <img src="https://raw.githubusercontent.com/mahli262/tugas-wad/main/Lab%20Praktikum%20WAD/Images%20M3/logo-ead.png" width="150px" alt="">
               </a>
               <div class="d-flex">
@@ -36,7 +36,7 @@
         </div>
             <div class="col align-self-center">
                 <div class="form">
-                  <form action="" method="post" autocomplete="off">
+                  <form action="../config/create.php" method="post" autocomplete="off">
 
                     <div class="form-group my-2">
                       <label class="title" for="judul_buku">Judul Buku</label>
@@ -76,31 +76,31 @@
                       <label for="tag" class="col-sm-2 col-form-label title">Tag</label>
                       <div class="col-sm-10" style="padding: 7px;">
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option1">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="Pemrogramman">
                           <label class="form-check-label" for="tag">Permograman</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="Website">
                           <label class="form-check-label" for="tag">Website</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="Java">
                           <label class="form-check-label" for="tag">Java</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="OOP">
                           <label class="form-check-label" for="tag">OOP</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="MVC">
                           <label class="form-check-label" for="tag">MVC</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="Kalkulus">
                           <label class="form-check-label" for="tag">Kalkulus</label>
                         </div>
                         <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="tag" value="option2">
+                          <input class="form-check-input" type="checkbox" id="tag" name="tag[]" value="Lainnya">
                           <label class="form-check-label" for="tag">Lainnya</label>
                         </div>
                       </div>
@@ -109,13 +109,13 @@
                     <div class="form-group my-2 tit">
                       <div class="custom-file">
                         <label class="title" for="gambar" style="display: block;">Gambar</label>
-                        <input type="file" id="file" class="form-control" name="gambar">
+                        <input type="file" id="gambar" class="form-control" name="gambar">
                     </div>
                     </div>
 
                     <div class="form-group my-3">
                       <div class="button" style="padding-left: 30%;padding-right: 30%; padding-top: 30px;">
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">+ TAMBAH</button>
+                        <button type="submit" name="submit" class="btn btn-primary" style="width: 100%;">+ TAMBAH</button>
                       </div>
                     </div>
                   </form>

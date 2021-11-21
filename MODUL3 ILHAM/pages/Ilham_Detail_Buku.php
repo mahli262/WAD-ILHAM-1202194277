@@ -35,7 +35,7 @@
                 </h2>
             </div>
             <div class="row justify-content-center">
-                <img src="https://lh3.googleusercontent.com/proxy/-D96-ohylTtEwnrTSo1s0vPXgrphK7nTKpmB2RUJpFAIgxtoGEAHL-eePBuYHNL3N05mKGkR5FFIA6P45QHFlLSDHTLGneb4QOo9c6jGpiVRKLyPwBNmga73-A1sO7Bh" class="card-img-top" alt="...">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/91266slEECL.jpg" class="card-img-top" alt="...">
             </div>
             <div class="row justify-content-center">
                 <hr style="border: 2px solid aqua; width: 92%;margin-top: 30px;margin-bottom: 0% ; padding: 0%;">

@@ -31,3 +31,29 @@
     width: auto;
 }
 
+.detail-buku h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.detail-buku .container .box .row .button{
+    padding: 10px;
+}
+
+.detail-buku .row .button .btn{
+    width: 100%;
+}
+
+section .modal-dialog {
+    height: auto;
+}
+
+section .modal-dialog .modal-content{
+    height: 100%;
+    width: 100%;
+}
+
+section .modal-dialog .modal-content .form .title{
+    font-weight: 700;
+}
+
