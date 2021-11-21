@@ -1,5 +1,5 @@
 <?php
-    include("../config/connect.php");
+    include("../config/Ilham_Connect.php");
     $query = "SELECT * FROM buku_table";
     $select = mysqli_query($conn,$query);
 ?>
@@ -44,11 +44,11 @@
                 while ($selects = mysqli_fetch_assoc($select)) { ?>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/91266slEECL.jpg" class="card-img-top" alt="...">
+                      <img src="../images/<?php echo $selects['gambar'] ?>" class="card-img-top" alt="uknown">
                       <div class="card-body">
                         <h5 class="card-title"><?php echo $selects["judul_buku"]; ?></h5>
                         <p class="card-text desc"><?php echo $selects["deskripsi"]; ?></p>
-                        <a href="Ilham_Detail_Buku.php?id=<?php $selects['id_buku'] ?>" class="btn btn-primary">Tampilkan Lebih Lanjut</a>
+                        <a href="Ilham_Detail_Buku.php?id=<?php echo $selects['id_buku']; ?>" class="btn btn-primary">Tampilkan Lebih Lanjut</a>
                       </div>
                     </div>
                   </div>

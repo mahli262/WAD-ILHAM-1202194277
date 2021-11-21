@@ -36,7 +36,7 @@
         </div>
             <div class="col align-self-center">
                 <div class="form">
-                  <form action="../config/create.php" method="post" autocomplete="off">
+                  <form action="../config/Ilham_Create.php" method="post" autocomplete="off">
 
                     <div class="form-group my-2">
                       <label class="title" for="judul_buku">Judul Buku</label>
