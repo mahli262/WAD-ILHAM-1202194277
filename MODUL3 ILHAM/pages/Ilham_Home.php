@@ -1,7 +1,7 @@
   <?php
       include("../config/Ilham_Connect.php");
       $query = "SELECT * FROM buku_table";
-      $select = mysqli_query($con,$query);
+      $select = mysqli_query($conn,$query);
   ?>
 
   <!DOCTYPE html>
