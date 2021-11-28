@@ -15,23 +15,50 @@
     <section>
         <nav class="navbar navbar-dark sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="../index.html" style="color: black; margin: 0%; font-weight: 700;">
+            <a class="navbar-brand" href="../index.php" style="color: black; margin: 0%; font-weight: 700;">
               EAD Travel
             </a>
             <div class="d-flex nav-item">
-              <a style="font-weight: 500;" class="nav-link active" href="" role="button">Register</a>
-              <a class="nav-link" href="login.html" role="button">Login</a>
+              <a class="nav-link" href="registrasi.php" role="button">Register</a>
+              <a style="font-weight: 500;" class="nav-link" href="#" role="button">Login</a>
             </div>
           </div>
         </nav>
     </section>
 
     <!-- Content -->
-    
+    <section>
+        <div class="box">
+            <div class="registrasi">
+                <div class="tagline">
+                    <h2 style="text-align: center;">Login</h2>
+                    <hr>
+                </div>
+                <form>
+                    <div class="mb-2">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Alamat E-Mail">
+                    </div>
+                    <div class="mb-2">
+                      <label for="password" class="form-label">Kata Sandi</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Kata Sandi Anda">
+                    </div>
+                    <div class="mb-2">
+                      <input type="checkbox" class="form-check-input" id="ingat" name="ingat">
+                      <label class="form-check-label" for="ingat">Remember Me</label>
+                    </div>
+                    <div class="text-center">
+                        <button style="margin: 10px;" type="submit" class="btn btn-primary" >Submit</button>
+                        <p>Anda belum punya akun? <a href="registrasi.php">Register</a></p>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <section>
-      <Footer style="bottom: 0%;position: sticky; margin-top: 30px; background-color: #8FB9F4;" class="navbar">
+      <Footer style="bottom: 0%;position: absolute; margin-top: 30px; background-color: #8FB9F4;" class="navbar">
           <div class="mx-auto">
             <p style="margin: 10px;">
               ©2021 Copyright <a data-bs-toggle="modal" href="#copyright">ILHAM ILYASA_1202194277</a>

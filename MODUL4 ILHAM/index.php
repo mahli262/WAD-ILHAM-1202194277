@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,12 +17,12 @@
     <section>
         <nav class="navbar navbar-dark sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="" style="color: black; margin: 0%; font-weight: 700;">
+            <a class="navbar-brand" href="#" style="color: black; margin: 0%; font-weight: 700;">
               EAD Travel
             </a>
             <div class="d-flex nav-item">
-              <a class="nav-link" href="pages/registrasi.html" role="button">Register</a>
-              <a class="nav-link" href="pages/login.html" role="button">Login</a>
+              <a class="nav-link" href="pages/registrasi.php" role="button">Register</a>
+              <a class="nav-link" href="pages/login.php" role="button">Login</a>
             </div>
           </div>
         </nav>
@@ -82,9 +84,10 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="form">
-                <form action="">
+                <form action="config/create.php" method="POST">
                   <div class="modal-body">
                     <div class="form-group my-2">
+                      <input type="text" value="<?php echo $display["id"]; ?>" hidden name="id" id="id">
                         <input type="text" value="Raja Ampat" hidden name="namatempat" id="namatempat">
                         <input type="text" value="Papua" hidden name="lokasi" id="lokasi">
                         <input type="text" value="7000000" hidden name="harga" id="harga">
@@ -111,9 +114,10 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="form">
-                <form action="">
+                <form action="config/create.php" method="POST">
                   <div class="modal-body">
                     <div class="form-group my-2">
+                      <input type="text" value="<?php echo $display["id"]; ?>" hidden name="id" id="id">
                       <input type="text" value="Gunung Bromo" hidden name="namatempat" id="namatempat">
                       <input type="text" value="Malang" hidden name="lokasi" id="lokasi">
                       <input type="text" value="2000000" hidden name="harga" id="harga">
@@ -141,9 +145,10 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="form">
-                <form action="">
+                <form action="config/create.php" method="POST">
                   <div class="modal-body">
                     <div class="form-group my-2">
+                      <input type="text" value="<?php echo $display["id"]; ?>" hidden name="id" id="id">
                       <input type="text" value="Tanah Lot" hidden name="namatempat" id="namatempat">
                         <input type="text" value="Bali" hidden name="lokasi" id="lokasi">
                         <input type="text" value="5000000" hidden name="harga" id="harga">
@@ -153,7 +158,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                      <button name="submit" id="submit" type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                      <button name="submit" id="submit" type="submit" class="btn btn-primary">Tambahkan</button>
                     </div>
                 </form>
                 </div>

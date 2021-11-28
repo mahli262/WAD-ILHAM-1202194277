@@ -15,12 +15,12 @@
     <section>
         <nav class="navbar navbar-dark sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="../index.html" style="color: black; margin: 0%; font-weight: 700;">
+            <a class="navbar-brand" href="../index.php" style="color: black; margin: 0%; font-weight: 700;">
               EAD Travel
             </a>
             <div class="d-flex nav-item">
               <a style="font-weight: 500;" class="nav-link active" href="" role="button">Register</a>
-              <a class="nav-link" href="login.html" role="button">Login</a>
+              <a class="nav-link" href="login.php" role="button">Login</a>
             </div>
           </div>
         </nav>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="text-center">
                         <button style="margin: 10px;" type="submit" class="btn btn-primary" >Submit</button>
-                        <p>Anda sudah punya akun? <a href="login.html">Login</a></p>
+                        <p>Anda sudah punya akun? <a href="login.php">Login</a></p>
                     </div>
                   </form>
             </div>
