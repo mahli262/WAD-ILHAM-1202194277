@@ -3,7 +3,7 @@
     if(isset($_POST['submit'])){
         $namatempat = isset($_POST['namatempat']) ? $_POST['namatempat'] : null;
         $lokasi = isset($_POST['lokasi']) ? $_POST['lokasi'] : null;
-        $harga = isset($_POST['harga$harga']) ? $_POST['harga$harga'] : null;
+        $harga = isset($_POST['harga']) ? $_POST['harga'] : null;
         $tgl = isset($_POST['tgl']) ? $_POST['tgl'] : null;
 
         $filename = $_FILES['gambar']['name'];        

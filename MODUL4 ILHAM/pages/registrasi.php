@@ -34,7 +34,7 @@
                     <h2 style="text-align: center;">Register</h2>
                     <hr>
                 </div>
-                <form>
+                <form action="../config/create_acc.php" method="POST">
                     <div class="mb-2">
                       <label for="nama" class="form-label">Nama</label>
                       <input type="text" class="form-control" id="nama" name="nama" aria-describedby="emailHelp" placeholder="Masukkan Nama Lengkap">
@@ -43,6 +43,10 @@
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Alamat E-Mail">
                     </div>
+                    <?php  $erroremail = isset($_GET['erroremail']) ? $_GET['erroremail'] : null; ?>
+                    <?php  if (isset($erroremail)) : ?>
+                        <p style='text-align: center; color:red'>email sudah terdaftar</p>
+                    <?php endif; ?>
                     <div class="mb-2">
                       <label for="nohp" class="form-label">Nomor Handphone</label>
                       <input type="number" class="form-control" id="nohp" name="nohp" placeholder="Masukkan Nomor Handphone">
@@ -55,8 +59,12 @@
                       <label for="konfirmasi" class="form-label">Konfirmasi Kata Sandi</label>
                       <input type="password" class="form-control" id="konfirmasi" name="konfirmasi" placeholder="Konfirmasi Kata Sandi Anda">
                     </div>
+                    <?php  $error = isset($_GET['error']) ? $_GET['error'] : null; ?>
+                    <?php  if (isset($error)) : ?>
+                        <p style='text-align: center; color:red'>konfirmasi password tidak sesuai</p>
+                    <?php endif; ?>
                     <div class="text-center">
-                        <button style="margin: 10px;" type="submit" class="btn btn-primary" >Submit</button>
+                        <button style="margin: 10px;" type="submit" name="submit" id="submit" class="btn btn-primary" >Submit</button>
                         <p>Anda sudah punya akun? <a href="login.php">Login</a></p>
                     </div>
                   </form>

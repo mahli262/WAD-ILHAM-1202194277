@@ -1,4 +1,17 @@
+<?php
 
+    if(isset($_GET['login'])){
+      session_start();
+      include("config/connect.php");
+      $email = $_SESSION['email'];
+      $password = $_SESSION['password'];
+
+      $query = "SELECT * FROM user WHERE email='$email'";
+      $select = mysqli_query($conn,$query);
+      $display = mysqli_fetch_assoc($select);
+      $nama = $display['nama'];
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +34,24 @@
               EAD Travel
             </a>
             <div class="d-flex nav-item">
-              <a class="nav-link" href="pages/registrasi.php" role="button">Register</a>
-              <a class="nav-link" href="pages/login.php" role="button">Login</a>
+              <?php if(isset($nama)) { ?>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <?php echo $nama;?>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="" class="dropdown-item" type="button">Profile</a></li>
+                        <li><a href="config/logout.php" class="dropdown-item" type="button">Logout</a></li>
+                    </ul>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+    </script>
+                </div>
+              <?php } else { ?>
+                <a class="nav-link" href="pages/registrasi.php" role="button">Register</a>
+                <a class="nav-link" href="pages/login.php" role="button">Login</a>
+              <?php } ?>
             </div>
           </div>
         </nav>
@@ -45,7 +74,11 @@
                                   <p class="card-text" style="min-height: 260px; height: 100%;">Kepulauan Raja Ampat adalah kepulauan Indonesia di ujung barat laut Semenanjung Kepala Burung di Papua Barat. Terdiri dari ratusan pulau yang tertutup hutan, Raja Ampat dikenal dengan pantai dan terumbu karangnya yang kaya dengan kehidupan laut. Lukisan batu dan gua kuno berada di Pulau Misool, sedangkan cendrawasih merah hidup di Pulau Waigeo Batanta dan Salawati adalah pulau pulau utama lainnya di nusantara.</p>
                                   <hr>
                                   <h3>Rp. 7.000.000</h3>
-                                  <a data-bs-toggle="modal" href="#papua" class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
+                                  <a data-bs-toggle="modal" 
+                                  <?php if(isset($nama)){ ?>
+                                    href="#papua"
+                                 <?php } ?>
+                                   class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
                                 </div>
                               </div>
                         </div>
@@ -57,7 +90,10 @@
                                   <p class="card-text" style="min-height: 260px; height: 100%;">Gunung Bromo adalah gunung berapi somma aktif dan bagian dari pegunungan Tengger, di Jawa Timur, Indonesia. Pada 2.329 meter itu bukan puncak tertinggi dari massif, tetapi yang paling terkenal. Kawasan ini merupakan salah satu destinasi wisata yang paling banyak dikunjungi di Jawa Timur, dan gunung berapi ini termasuk dalam Taman Nasional Bromo Tengger Semeru.</p>
                                   <hr>
                                   <h3>Rp. 2.000.000</h3>
-                                  <a data-bs-toggle="modal" href="#malang" class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
+                                  <a data-bs-toggle="modal" <?php if(isset($nama)){ ?>
+                                    href="#malang"
+                                 <?php } ?>
+                                  class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
                                 </div>
                               </div>
                         </div>
@@ -69,7 +105,10 @@
                                   <p class="card-text" style="min-height: 260px; height: 100%;">Tanah Lot adalah formasi batuan di lepas pantại pulau Bali, Indonesia. Ini adalah rumah bagi kuil ziarah Hindu kuno Pura Tanah Lot, ikon wisata dan budaya yang populer untuk fotografi. Di sini ada dua pura yang terletak di atas batu besar. Satu terletak di atas bongkahan batu dan satunya terletak di atas tebing mirip dengan Pura Uluwatu. Pura Tạnah Lot ini merupakan bagian dari pura Dang Kahyangan.</p>
                                   <hr>
                                   <h3>Rp. 5.000.000</h3>
-                                  <a data-bs-toggle="modal" href="#bali" class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
+                                  <a data-bs-toggle="modal" <?php if(isset($nama)){ ?>
+                                    href="#bali"
+                                 <?php } ?>
+                                 class="btn btn-primary" style="width: 100%;">Pesan Tiket</a>
                                 </div>
                               </div>
                         </div>

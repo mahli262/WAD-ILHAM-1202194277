@@ -34,7 +34,7 @@
                     <h2 style="text-align: center;">Login</h2>
                     <hr>
                 </div>
-                <form>
+                <form action="../config/login_acc.php" method="POST" autocomplete="off">
                     <div class="mb-2">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Alamat E-Mail">
@@ -47,8 +47,12 @@
                       <input type="checkbox" class="form-check-input" id="ingat" name="ingat">
                       <label class="form-check-label" for="ingat">Remember Me</label>
                     </div>
+                    <?php  $error = isset($_GET['error']) ? $_GET['error'] : null; ?>
+                    <?php  if (isset($error)) : ?>
+                        <p style='text-align: center; color:red'>password salah</p>
+                    <?php endif; ?>
                     <div class="text-center">
-                        <button style="margin: 10px;" type="submit" class="btn btn-primary" >Submit</button>
+                        <button style="margin: 10px;" type="submit" name="submit" id="submit" class="btn btn-primary" >Submit</button>
                         <p>Anda belum punya akun? <a href="registrasi.php">Register</a></p>
                     </div>
                   </form>
