@@ -1,18 +1,17 @@
 <?php
     include_once("connect.php");
     if(isset($_POST['submit'])){
-        $namatempat = isset($_POST['namatempat']) ? $_POST['namatempat'] : null;
-        $lokasi = isset($_POST['lokasi']) ? $_POST['lokasi'] : null;
-        $harga = isset($_POST['harga']) ? $_POST['harga'] : null;
-        $tgl = isset($_POST['tgl']) ? $_POST['tgl'] : null;
 
-        $filename = $_FILES['gambar']['name'];        
-        move_uploaded_file($_FILES['gambar']['tmp_name'], '../images/'.$filename);
+        $user_id = $_POST['id'];
+        $namatempat = $_POST['namatempat'];
+        $lokasi = $_POST['lokasi'];
+        $harga = $_POST['harga'];
+        $tgl = $_POST['tgl'];
 
-        $query = "INSERT INTO buku_table (id_buku, judul_buku, penulis_buku, tahun_terbit, deskripsi, bahasa, tag, gambar) VALUES ('','$judul_buku','$penulis_buku','$tahun_terbit','$deskripsi','$bahasa','$tag','$gambar')";
+        $query = "INSERT INTO booking (id, user_id, nama_tempat, lokasi, harga, tanggal) VALUES ('','$user_id','$namatempat','$lokasi','$harga','$tgl')";
         $insert = mysqli_query($conn,$query);
 
-        header("Location: ../pages/Ilham_Home.php");
+        header("Location: ../index.php");
     }
 
 ?>

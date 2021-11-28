@@ -8,7 +8,11 @@
       $query = "SELECT * FROM user WHERE email='$email'";
       $select = mysqli_query($conn,$query);
       $display = mysqli_fetch_assoc($select);
+      $user_id = $display['id'];
       $nama = $display['nama'];
+
+      $querybooking = "SELECT * FROM booking WHERE user_id='$user_id'";
+      $selectbooking = mysqli_query($conn, $querybooking);
     }
 ?>
 
@@ -29,12 +33,12 @@
     <section>
         <nav class="navbar navbar-dark sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="#" style="color: black; margin: 0%; font-weight: 700;">
+            <a class="navbar-brand" href="../index.php" style="color: black; margin: 0%; font-weight: 700;">
               EAD Travel
             </a>
             <div class="d-flex nav-item">
               <?php if(isset($nama)) { ?>
-                <a class="navbar-brand" href="pages/bookings.php">
+                <a class="navbar-brand" href="">
                 <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" width="30" height="24"/>
     </a>
                 <div class="dropdown">
@@ -73,30 +77,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-    </tr>
-    <tr>
-    <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-    </tr>
-    <tr>
-    <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-      <td>asd</td>
-    </tr>
+    <?php
+        $count=1;
+        while($selects = mysqli_fetch_assoc($selectbooking)) { ?>
+        <div class="col">
+                      <tr>
+                        <td><?php echo $count ?></td>
+                        <td><?php echo $selects['nama_tempat'] ?></td>
+                        <td><?php echo $selects['lokasi'] ?></td>
+                        <td><?php echo $selects['tanggal'] ?></td>
+                        <td><?php echo $selects['lokasi'] ?></td>
+                        <td><a class="btn btn-danger" href="../config/delete.php?id=<?php echo $selects['id'] ?>">Hapus</a></td>
+                      </tr>
+                  
+                  <?php } ?>
   </tbody>
 </table>
     </div>
