@@ -1,0 +1,38 @@
+body {
+    background: #FFF9E7;
+}
+
+section .navbar{
+    background-color: #8FB9F4;
+    width: 100%;
+}
+
+
+section .navbar .container {
+    width: 100%;
+    padding: 0%;
+    margin-top: 0%;
+}
+
+section .navbar .container .nav-link{
+    color: black;
+    font-weight: 400;
+}
+
+.container{
+    margin-top: 20px;
+    padding: 0%;
+}
+
+.container .box .tagline{
+     text-align: center;
+     padding: 30px;
+     margin-bottom: 10px;
+     background-color: #98C6A7;
+}
+
+.row .col .card .card-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}

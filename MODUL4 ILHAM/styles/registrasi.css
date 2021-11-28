@@ -1,0 +1,41 @@
+body {
+    background-color: #FFF9E7;
+}
+
+section .navbar{
+    background-color: #8FB9F4;
+    width: 100%;
+}
+
+
+section .navbar .container {
+    width: 100%;
+    padding: 0%;
+    margin-top: 0%;
+}
+
+section .navbar .container .nav-link{
+    color: black;
+    font-weight: 300;
+}
+
+.container{
+    margin-top: 20px;
+    padding: 0%;
+}
+
+.box {
+    margin: 35%;
+    margin-bottom: 0%;
+    margin-top: 20px;
+    background-color: white;
+    height: auto;
+    width: auto;
+}
+
+.box .registrasi {
+    /* background-color: green; */
+    padding: 30px;
+    width: auto;
+    height: auto;
+}
