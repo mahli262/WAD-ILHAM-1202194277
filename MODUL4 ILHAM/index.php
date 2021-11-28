@@ -1,5 +1,5 @@
 <?php
-    echo $_SESSION['email'];
+    session_start();
     if(isset($_SESSION['email'])){
       include("config/connect.php");
       $email = $_SESSION['email'];
