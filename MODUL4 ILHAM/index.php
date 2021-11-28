@@ -1,7 +1,6 @@
 <?php
-
-    if(isset($_GET['login'])){
-      session_start();
+    echo $_SESSION['email'];
+    if(isset($_SESSION['email'])){
       include("config/connect.php");
       $email = $_SESSION['email'];
       $password = $_SESSION['password'];
@@ -35,13 +34,16 @@
             </a>
             <div class="d-flex nav-item">
               <?php if(isset($nama)) { ?>
+                <a class="navbar-brand" href="pages/bookings.php">
+                <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" width="30" height="24"/>
+    </a>
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <?php echo $nama;?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a href="" class="dropdown-item" type="button">Profile</a></li>
+                        <li><a href="pages/profile.php" class="dropdown-item" type="button">Profile</a></li>
                         <li><a href="config/logout.php" class="dropdown-item" type="button">Logout</a></li>
                     </ul>
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"

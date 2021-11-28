@@ -15,7 +15,7 @@
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;
 
-            header("Location: ../index.php?login=true");
+            header("Location: ../index.php");
         } else{
             header("Location: ../pages/login.php?error=true");
         }
