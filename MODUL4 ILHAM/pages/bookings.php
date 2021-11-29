@@ -24,6 +24,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <link rel="icon" href="https://raw.githubusercontent.com/mahli262/tugas-wad/main/Lab%20Praktikum%20WAD/Images%20M3/1200px-Telkom_University_Logo.svg.png" type="image/icon type">
     <title>M4 ILHAM ILYASA</title>
 </head>
@@ -42,17 +44,15 @@
                 <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-cart-supermarket-flatart-icons-lineal-color-flatarticons.png" width="30" height="24"/>
     </a>
                 <div class="dropdown">
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <?php echo $nama;?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a href="pages/profile.php" class="dropdown-item" type="button">Profile</a></li>
+                        <li><a href="profile.php" class="dropdown-item" type="button">Profile</a></li>
                         <li><a href="config/logout.php" class="dropdown-item" type="button">Logout</a></li>
                     </ul>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
-    </script>
                 </div>
               <?php } else { ?>
                 <a class="nav-link" href="pages/registrasi.php" role="button">Register</a>
@@ -82,15 +82,31 @@
         while($selects = mysqli_fetch_assoc($selectbooking)) { ?>
         <div class="col">
                       <tr>
+
                         <td><?php echo $count ?></td>
                         <td><?php echo $selects['nama_tempat'] ?></td>
                         <td><?php echo $selects['lokasi'] ?></td>
                         <td><?php echo $selects['tanggal'] ?></td>
-                        <td><?php echo $selects['lokasi'] ?></td>
+                        <td><?php echo "Rp."." ".$selects['harga'] ?></td>
                         <td><a class="btn btn-danger" href="../config/delete.php?id=<?php echo $selects['id'] ?>">Hapus</a></td>
                       </tr>
                   
-                  <?php } ?>
+                  <?php 
+                $count++;
+                } ?>
+        <tr>
+          <th>Total</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <?php 
+              $querytotal = "SELECT SUM(harga) AS total FROM booking WHERE user_id='$user_id'";
+              $selecttotal = mysqli_query($conn,$querytotal);
+              $displaytotal = mysqli_fetch_assoc($selecttotal);
+          ?>
+          <th><?php echo "Rp."." ".$displaytotal['total'] ?></th>
+          <td></td>
+        </tr>
   </tbody>
 </table>
     </div>
