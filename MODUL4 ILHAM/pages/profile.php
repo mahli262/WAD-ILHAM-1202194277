@@ -2,7 +2,7 @@
       session_start();
       if(isset($_SESSION['email'])){
         include("../config/connect.php");
-        $email = $SESSION['email'];
+        $email = $_SESSION['email'];
         $password = $_SESSION['password'];
 
         $query = "SELECT * FROM user WHERE email='$email'";
