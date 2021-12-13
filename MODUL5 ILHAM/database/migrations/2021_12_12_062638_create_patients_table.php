@@ -16,11 +16,11 @@ class CreatePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->foreignId('vaccine_id');
-            $table->string('name');
-            $table->string('nik');
-            $table->string('alamat');
-            $table->string('image_ktp');
-            $table->string('no_hp');
+            $table->string('name')->nullable();
+            $table->string('nik')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('image_ktp')->nullable();
+            $table->string('no_hp')->nullable();
             $table->timestamps();
         });
     }
