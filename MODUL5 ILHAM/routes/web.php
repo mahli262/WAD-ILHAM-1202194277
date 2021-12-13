@@ -25,7 +25,7 @@
 
         // views method
         Route::get('/', [VaccineController::class, 'index'])->name('vaccine.home-view');
-        Route::post('/add', [VaccineController::class, 'add_index'])->name('vaccine.add-view');
+        Route::get('/add', [VaccineController::class, 'add_index'])->name('vaccine.add-view');
         Route::get('/edit/{vaccine}', [VaccineController::class, 'edit_index'])->name('vaccine.edit-view');
 
         // CRUD METHOD

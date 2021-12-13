@@ -6,7 +6,6 @@
           Edit Vaccine
       </h2>
   </div>
-  {{$vaccine}}
   <div class="form">
       <form action="{{route('vaccine.update', $vaccine->id)}}" method="post" autocomplete="off">
         @csrf

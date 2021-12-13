@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
     use App\Http\Requests\VaccineStoreRequest;
     use App\Models;
-    use Illuminate\Http\Request;
+use App\Models\Vaccine;
+use Illuminate\Http\Request;
 
     class VaccineController extends Controller
     {
